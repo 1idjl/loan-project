@@ -1,63 +1,88 @@
-# Machine Learning Project
+# Loan Prediction Machine Learning Project
 
-This project is designed to implement a machine learning model using Python. It includes data preprocessing, model training, and evaluation, along with exploratory data analysis.
+This project predicts loan approval using various machine learning models. It includes data preprocessing, feature engineering, model training, evaluation, and comparison.
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-ml-project
-├── data
-│   ├── raw                # Contains raw data files
-│   └── processed          # Contains processed data files
-├── notebooks
-│   └── exploration.ipynb  # Jupyter notebook for exploratory data analysis
-├── src
-│   ├── data_preprocessing.py  # Data cleaning and preprocessing functions
-│   ├── model.py               # Machine learning model architecture
-│   └── train.py               # Model training logic
-├── tests
-│   └── test_model.py          # Unit tests for the model
-├── requirements.txt           # Python dependencies
-└── README.md                  # Project documentation
+loan-project/
+├── data/
+│   ├── loan.csv
+│   ├── processed/
+│   └── raw/
+├── notebooks/
+│   ├── data2.ipynb
+│   ├── best_ANN (MLP)_model.pkl
+│   ├── best_CatBoost_model.pkl
+│   ├── best_KNN_model.pkl
+│   ├── best_LightGBM_model.pkl
+│   ├── best_loan_prediction_model.pkl
+│   ├── best_LogisticRegression_model.pkl
+│   ├── best_RandomForest_model.pkl
+│   ├── best_SVM_model.pkl
+│   ├── best_voting_classifier.pkl
+│   ├── best_XGBoost_model.pkl
+│   ├── comparison_accuracy.html
+│   ├── comparison_f1-score.html
+│   ├── comparison_precision.html
+│   ├── comparison_recall.html
+│   └── ...
+├── src/
+│   └── ...
+├── tests/
+│   └── ...
+├── requirements.txt
+├── README.md
 ```
 
-## Installation
+## 🚀 How to Run
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/ml-project.git
-   cd ml-project
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/loan-project.git
+   cd loan-project
    ```
 
-2. Install the required packages:
-   ```
+2. **Install dependencies:**
+   ```sh
    pip install -r requirements.txt
    ```
 
-## Usage
-
-1. Preprocess the data by running:
-   ```
-   python src/data_preprocessing.py
+3. **Run Jupyter Notebook for analysis and modeling:**
+   ```sh
+   jupyter notebook notebooks/data2.ipynb
    ```
 
-2. Train the model:
-   ```
-   python src/train.py
-   ```
+## 🧹 Data Preprocessing
 
-3. Explore the data using the Jupyter notebook:
-   ```
-   jupyter notebook notebooks/exploration.ipynb
-   ```
+- Missing values handled using KNNImputer.
+- Features encoded and scaled.
+- Outliers removed using IQR method.
+- Feature engineering: `TotalIncome`, `LTI`, `DTI`.
 
-## Testing
+## 🏦 Modeling
 
-Run the unit tests to ensure the model behaves as expected:
-```
-python -m unittest discover -s tests
-```
+- Models trained: Logistic Regression, KNN, ANN (MLP), Random Forest, XGBoost, LightGBM, CatBoost, SVM.
+- Hyperparameter tuning with GridSearchCV/RandomizedSearchCV.
+- SMOTE used for class balancing.
+- VotingClassifier combines top models.
 
-## License
+## 📊 Evaluation & Visualization
 
-This project is licensed under the MIT License.
+- Metrics: Accuracy, Precision, Recall, F1-Score, ROC AUC.
+- Comparison charts saved as HTML: accuracy, precision, recall, f1-score.
+- Feature importance visualized.
+- ROC curves for all models.
+
+## 📦 Outputs
+
+- Best models saved as `.pkl` files in `notebooks/`.
+- Evaluation results saved as CSV and HTML.
+
+## 📝 License
+
+MIT License.
+
+---
+
+**For more details, see the notebook:** [notebooks/data2.ipynb](notebooks/data2.ipynb)

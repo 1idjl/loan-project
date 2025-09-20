@@ -3,3 +3,10 @@ numpy
 scikit-learn
 tensorflow
 jupyter
+plotly
+seaborn
+xgboost
+lightgbm
+catboost
+imblearn
+joblib
