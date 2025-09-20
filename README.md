@@ -7,11 +7,7 @@ This project predicts loan approval using various machine learning models. It in
 ```
 loan-project/
 ├── data/
-│   ├── loan.csv
-│   ├── processed/
-│   └── raw/
-├── notebooks/
-│   ├── data2.ipynb
+│     ├──output│
 │   ├── best_ANN (MLP)_model.pkl
 │   ├── best_CatBoost_model.pkl
 │   ├── best_KNN_model.pkl
@@ -27,13 +23,13 @@ loan-project/
 │   ├── comparison_precision.html
 │   ├── comparison_recall.html
 │   └── ...
-├── src/
-│   └── ...
-├── tests/
-│   └── ...
+│      ├──input
+│           ├── loan.csv           
+├── notebooks/
+│   ├── loan_ project.ipynb
 ├── requirements.txt
 ├── README.md
-```
+
 
 ## 🚀 How to Run
 
